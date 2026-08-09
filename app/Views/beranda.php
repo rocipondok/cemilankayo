@@ -2,7 +2,7 @@
 
 <?= $this->section('isi');?>
 		
- <H1> <?= $judul; ?></H1>
+ <h1> <?= $judul; ?></h1>
 		<div class="container">
 	<div class="row">
 <div class="col">

@@ -13,13 +13,13 @@ Ini Halaman Produk
       <div class="row row-cols-1 row-cols-md-3 g-4">
     <!-- <tr> -->
       
-        <?php foreach($produk as $b):?> 
+        <?php foreach($namabrg as $b):?> 
 
        <div class="card h-45 " >
-      <img src="/public/<?=$b['slug'];?>.png" class="card-img-top" width ="133">
+      <img src="/<?=$b['slug'];?>.png" class="card-img-top" width ="133">
       <div class="card-body">
-        <h4 class="card-title"><?=$b['nmproduk'];?> </h4>
-        <h4 class="card-text">Harga <?=$b['hrgproduk'];?></h4>
+        <h4 class="card-title"><?=$b['namabrg'];?> </h4>
+        <h4 class="card-text">Harga <?=$b['harga'];?></h4>
           <?php foreach($toko as $c):?> 
       <a href="https://wa.me/<?=$c['notelp'];?>" class="btn btn-success"?> Order Barang</a> <?php endforeach; ?>
            </div>
@@ -35,18 +35,18 @@ Ini Halaman Produk
 <!-- </tr> -->
 
   </tbody>
-<!-- <div class="row row-col-10 row-cols-md-3 g-4">
-  	<?php foreach($produk as $b) :?>
+<div class="row row-col-10 row-cols-md-3 g-4">
+  	<?php foreach($namabrg as $b) :?>
  <div class="card">
       <img src="<?=$b['slug'];?>.png" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title"><?= $b['nmproduk'];?></h5>
-        <h5 class="card-text"><?= $b['hrgproduk'];?></h5>
+        <h5 class="card-title"><?= $b['namabrg'];?></h5>
+        <h5 class="card-text"><?= $b['harga'];?></h5>
       </div>
     <?php endforeach; ?> 
     </div>
   </div>   
- -->
+
 
 
 

@@ -10,30 +10,27 @@ class Layanan extends BaseController
          $data = [
         'judul' => 'Layanan'
         ]; 
-    //    $tokoModel = new TokoModel();
-      //  $data = [
-      //    'toko'=> $tokoModel->findAll()
-      //   ];
+       $tokoModel = new TokoModel();
+       $data = [
+         'namatoko'=> $tokoModel->findAll()
+        ];
        
         return view('layanan',$data);        
     }
   
-    // public function detail($slugt)
-    // {
-    //   // //  $produkModel = new ProdukModel();
-    //   // // $produk = $produkModel->where('slugt',$slugt)->findAll();
-    //   // // $tokoModel = new TokoModel();
-    //   // // $data = [
-    //   // //   'produk' => $produk ,
-    //   // //   'slugt' => $slugt,
-    //   // //   'toko'=> $tokoModel->where('slugt',$slugt)->findAll()
-    //   //  ];
-
+    public function detail($slug)
+    {
+       $produkModel = new ProdukModel();
+      $produk = $produkModel->where('slug',$slug)->findAll();
+      $tokoModel = new TokoModel();
+      $data = [
+        'namabrg' => $namabrg,
+        'slug' => $slug,
+        'namatoko'=> $tokoModel->where('slugt',$slugt)->findAll()
+       ];
     
+         return view('produk',$data);   
 
-
-        //  return view('produk',$data);   
-
-    // }
+    }
   
 }

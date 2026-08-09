@@ -33,10 +33,10 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row"> </th>
-      <td > </td>
-      <td> </td>
-      <td> </td>
+      <th scope="row"> <?= dd($data)?></th>
+      <td >  </td>
+      <td>  </td>
+      <td>  </td>
   </tbody>
 </table>
 
